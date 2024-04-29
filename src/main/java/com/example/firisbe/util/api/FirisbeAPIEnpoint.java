@@ -10,7 +10,6 @@ public class FirisbeAPIEnpoint {
 
     public static final String CREATE_USER = "/registration";
 
-
-
-
+    public static final String PAYMENT_PATH = V1_ROOT_PATH + "/payment";
+    
 }

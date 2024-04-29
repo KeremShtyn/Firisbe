@@ -53,7 +53,7 @@ public class PaymentService {
     }
 
     private List<Payment> getPaymentsByCreatedDate(LocalDateTime startDate, LocalDateTime endDate){
-        return 
+        return paymentMapper.toListDomainObject(paymentRepository.findByCreatedDateBetween(startDate, endDate));
     }
 
 }
