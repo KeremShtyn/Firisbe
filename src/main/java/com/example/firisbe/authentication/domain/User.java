@@ -17,6 +17,7 @@ public class User extends BaseDomain {
     private String password;
     private String email;
     private UserRole role;
+    private String creditCardNumber;
 
     private Set<UserType> UserTypes;
     private Set<PaymentEntity> payments;

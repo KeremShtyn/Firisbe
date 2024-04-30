@@ -6,8 +6,6 @@ import lombok.Data;
 @Data
 public class PaymentDTO extends BaseDTO {
 
-    private String creditCardNumber;
-
     private double amount;
 
     private String userId;

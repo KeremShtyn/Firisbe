@@ -18,10 +18,6 @@ import javax.persistence.*;
 public class PaymentEntity extends BaseEntity {
 
 
-
-    @Column(name = "CARD_NUMBER")
-    private String creditCardNumber;
-
     @Column(name = "AMOUNT")
     private double amount;
 

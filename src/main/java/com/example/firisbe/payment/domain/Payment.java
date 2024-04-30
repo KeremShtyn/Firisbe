@@ -6,8 +6,6 @@ import lombok.Data;
 @Data
 public class Payment extends BaseDomain {
 
-    private String creditCardNumber;
-
     private double amount;
 
     private String userId;

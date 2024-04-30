@@ -42,6 +42,9 @@ public class UserEntity extends BaseEntity implements UserDetails {
     @Enumerated(EnumType.STRING)
     private UserRole role;
 
+    @Column(name = "CARD_NUMBER")
+    private String creditCardNumber;
+
     @OneToMany(mappedBy = "user",cascade = {CascadeType.MERGE,CascadeType.PERSIST})
     private Set<PaymentEntity> payments;
 
