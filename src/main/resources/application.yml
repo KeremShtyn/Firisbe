@@ -33,3 +33,8 @@ org.hibernate: info
 # Server configuration
 server:
 port: 2727 #set your portspring.application.name=firisbe
+# Enable Swagger UI
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
