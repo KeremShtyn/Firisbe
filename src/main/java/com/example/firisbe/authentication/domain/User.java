@@ -20,6 +20,6 @@ public class User extends BaseDomain {
     private String creditCardNumber;
 
     private Set<UserType> UserTypes;
-    private Set<PaymentEntity> payments;
+    private String paymentId;
 
 }

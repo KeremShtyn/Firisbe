@@ -1,4 +1,4 @@
-package com.example.firisbe.authentication.service.dto;
+package com.example.firisbe.authentication.dto;
 
 
 import lombok.Data;

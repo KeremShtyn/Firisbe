@@ -45,7 +45,7 @@ public class UserEntity extends BaseEntity implements UserDetails {
     @Column(name = "CARD_NUMBER")
     private String creditCardNumber;
 
-    @OneToMany(mappedBy = "user",cascade = {CascadeType.MERGE,CascadeType.PERSIST})
+    @OneToMany(mappedBy = "user",cascade = {CascadeType.MERGE,CascadeType.PERSIST}, fetch = FetchType.EAGER)
     private Set<PaymentEntity> payments;
 
     private Boolean locked = false;

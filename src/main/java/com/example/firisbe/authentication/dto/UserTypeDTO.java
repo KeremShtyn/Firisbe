@@ -1,4 +1,4 @@
-package com.example.firisbe.authentication.service.dto;
+package com.example.firisbe.authentication.dto;
 
 
 import com.example.firisbe.authentication.entity.UserRole;

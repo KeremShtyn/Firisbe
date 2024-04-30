@@ -10,7 +10,5 @@ public class Payment extends BaseDomain {
 
     private String userId;
 
-    private String username;
-
     private String userEmail;
 }
