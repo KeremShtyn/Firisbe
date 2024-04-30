@@ -9,6 +9,7 @@ import com.example.firisbe.payment.repository.PaymentRepository;
 import com.example.firisbe.util.FirisbePageable;
 import com.example.firisbe.util.error.ErrorCodes;
 import com.example.firisbe.util.exception.FirisbeException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -23,6 +24,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class PaymentService {
 
     private PaymentRepository paymentRepository;

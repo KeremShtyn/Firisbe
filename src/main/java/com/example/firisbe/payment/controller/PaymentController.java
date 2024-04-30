@@ -12,11 +12,13 @@ import com.example.firisbe.util.builder.SpecificationBuilder;
 import com.example.firisbe.util.response.FirisbeGenerator;
 import com.example.firisbe.util.response.FirisbeResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.json.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 
 import java.time.LocalDateTime;
@@ -25,6 +27,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+@Controller
+@Slf4j
 public class PaymentController implements PaymentApi {
 
     private PaymentService paymentService;
