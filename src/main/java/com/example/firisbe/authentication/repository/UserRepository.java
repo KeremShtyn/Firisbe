@@ -11,4 +11,8 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity,String>, CrudRepository<UserEntity, String> {
     Optional<UserEntity> findByUsername(String username);
+
+    Optional<UserEntity> findByEmail(String email);
+
+    Optional<UserEntity> findByCreditCardNumber(String creditCardNumber);
 }

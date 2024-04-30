@@ -43,7 +43,7 @@ public class UserService {
     }
 
     public User saveOrUpdate(User user) {
-        this.uniquenessUser(user.getUsername());
+        this.uniquenessUser(user);
         UserEntity userEntity = userMapper.toEntity(user);
         if (!CollectionUtils.isEmpty(userEntity.getUserTypes())) {
             userEntity.getUserTypes().forEach(u -> u.setUser(userEntity));
@@ -54,11 +54,18 @@ public class UserService {
 
 
 
-    private void uniquenessUser(String username) {
-        Optional<UserEntity> usernameOpt = userRepository.findByUsername(username);
+    private void uniquenessUser(User user) {
+        Optional<UserEntity> usernameOpt = userRepository.findByUsername(user.getUsername());
         if (usernameOpt.isPresent()) {
             throw new FirisbeException(ErrorCodes.THIS_USERNAME_HAS_TAKEN_BEFORE);
-
+        }
+        Optional<UserEntity> emailOpt = userRepository.findByEmail(user.getEmail());
+        if (emailOpt.isPresent()) {
+            throw new FirisbeException(ErrorCodes.THIS_EMAIL_HAS_TAKEN_BEFORE);
+        }
+        Optional<UserEntity> creditCardOpt = userRepository.findByCreditCardNumber(user.getCreditCardNumber());
+        if (creditCardOpt.isPresent()) {
+            throw new FirisbeException(ErrorCodes.THIS_CREDIT_CARD_HAS_TAKEN_BEFORE);
         }
     }
 }

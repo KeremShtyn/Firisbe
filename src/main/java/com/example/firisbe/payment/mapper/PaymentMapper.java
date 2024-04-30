@@ -11,10 +11,12 @@ public interface PaymentMapper extends BaseMapper<PaymentEntity, Payment> {
 
     @Mapping(source = "userId", target = "user.id")
     @Mapping(source = "userEmail", target = "user.email")
+    @Mapping(source = "userCreditCardNumber", target = "user.creditCardNumber")
     PaymentEntity toEntity(Payment domain);
 
     @Mapping(target = "userId", source = "user.id")
     @Mapping(target = "userEmail", source = "user.email")
+    @Mapping(target = "userCreditCardNumber", source = "user.creditCardNumber")
     Payment toDomainObject(PaymentEntity entityObject);
 
 }

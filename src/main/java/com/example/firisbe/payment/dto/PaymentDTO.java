@@ -11,4 +11,6 @@ public class PaymentDTO extends BaseDTO {
     private String userId;
 
     private String userEmail;
+
+    private String userCreditCardNumber;
 }
