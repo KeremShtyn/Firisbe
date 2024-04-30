@@ -12,9 +12,9 @@ import javax.persistence.*;
 @SQLDelete(sql = "UPDATE Payments SET DELETED_AT = CURRENT_TIMESTAMP WHERE id =? and version =? ")
 @Where(clause = "DELETED_DATE is null")
 @Entity(name = "Payments")
-@Table(name = "Payments", indexes = {@Index(columnList = "USERNAME", name = "payment_username_indx")})
+@Table(name = "Payments", indexes = {@Index(columnList = "CARD_NUMBER", name = "payment_card_number_indx")})
 @Data
-@EqualsAndHashCode(callSuper = false, exclude = {"UserTypes"})
+@EqualsAndHashCode(callSuper = false, exclude = {"USER_ID"})
 public class PaymentEntity extends BaseEntity {
 
 
