@@ -1,7 +1,7 @@
 package com.example.firisbe;
 
 
-import com.example.firisbe.authentication.service.dto.TokenRequestDTO;
+import com.example.firisbe.authentication.dto.TokenRequestDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;

@@ -1,8 +1,8 @@
 package com.example.firisbe.authentication.api;
 
 
-import com.example.firisbe.authentication.service.dto.TokenRequestDTO;
-import com.example.firisbe.authentication.service.dto.UserDTO;
+import com.example.firisbe.authentication.dto.TokenRequestDTO;
+import com.example.firisbe.authentication.dto.UserDTO;
 import com.example.firisbe.util.response.FirisbeResponse;
 import org.springframework.web.bind.annotation.*;
 
