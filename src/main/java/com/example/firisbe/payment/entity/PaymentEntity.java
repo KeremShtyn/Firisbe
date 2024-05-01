@@ -4,6 +4,7 @@ import com.example.firisbe.authentication.entity.UserEntity;
 import com.example.firisbe.util.base.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
@@ -15,6 +16,7 @@ import javax.persistence.*;
 @Table(name = "Payments", indexes = {@Index(columnList = "CARD_NUMBER", name = "payment_card_number_indx")})
 @Data
 @EqualsAndHashCode(callSuper = false, exclude = {"USER_ID"})
+@ToString(callSuper = true, includeFieldNames = true)
 public class PaymentEntity extends BaseEntity {
 
 
