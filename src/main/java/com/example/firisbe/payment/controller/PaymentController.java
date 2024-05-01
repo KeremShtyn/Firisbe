@@ -93,7 +93,7 @@ public class PaymentController implements PaymentApi {
         }
 
         Pageable page = PageRequest.of(pageNum, pageSize, Sort.by("id").ascending());
-        FirisbePageable<Payment> paymentPage = paymentService.findBySearchCriteria(builder.buildAirline(), page);
+        FirisbePageable<Payment> paymentPage = paymentService.findBySearchCriteria(builder.buildPayment(), page);
         paymentPage = new FirisbePageable<>(paymentPage.getTotalElements(), paymentPage.getTotalPages(), paymentPage.getPageable(), paymentPage.getContents());
 
 

@@ -28,7 +28,7 @@ public class SpecificationBuilder {
     }
 
 
-    public Specification<PaymentEntity> buildAirline() {
+    public Specification<PaymentEntity> buildPayment() {
         if (params.size() == 0 || Objects.isNull(params.get(0).getValue()) || params.get(0).getValue().toString().trim().length() == 0) {
             return null;
         }
