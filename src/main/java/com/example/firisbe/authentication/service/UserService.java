@@ -45,12 +45,6 @@ public class UserService {
 
     public FirisbePageable<User> findAll(int page, int size){
         Page<UserEntity> users = userRepository.findAll(PageRequest.of(page, size));
-        users.getContent().stream().map(user -> {
-            String decryptedCreditCardNumbers = decrypt(user.getCreditCardNumber());
-            user.setCreditCardNumber(decryptedCreditCardNumbers);
-            return user;
-        }).collect(Collectors.toList());
-
         return new FirisbePageable<User>(users.getTotalElements(),users.getTotalPages(),users.getPageable(),userMapper.toListDomainObject(users.getContent()));
     }
 
