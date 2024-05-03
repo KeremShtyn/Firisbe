@@ -60,7 +60,7 @@ public class PaymentService {
 
     private void validatePayment(Payment payment, String userId){
         Optional<UserEntity> user = userRepository.findById(userId);
-        if (user.isEmpty()){
+        if (Objects.isNull(user)){
             throw new FirisbeException(ErrorCodes.THIS_USER_DOES_NOT_EXIST);
         }
         if (Objects.isNull(payment.getAmount())){
